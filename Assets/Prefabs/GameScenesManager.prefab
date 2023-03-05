@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3200440350099825336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3200440350099825339}
+  - component: {fileID: 2326608646169086794}
+  m_Layer: 0
+  m_Name: GameScenesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3200440350099825339
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3200440350099825336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2326608646169086794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3200440350099825336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce91f0dce58e9b4bb3c0b112c6c157f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  castleWall: {fileID: 885627451222276301, guid: 14c0083f14cd39a439a7fd39a1e4772e, type: 3}
+  obstacle: {fileID: 332601004808443553, guid: b32c0dd8ada22dd4da38001df3c65cc2, type: 3}
+  redCannonBall: {fileID: 4263395869805782000, guid: af6fa93051831c34f8981556cf206586, type: 3}
+  greenCannonBall: {fileID: 1314687791007968377, guid: dad72a0f93b951e4fa7967f329d655fa, type: 3}

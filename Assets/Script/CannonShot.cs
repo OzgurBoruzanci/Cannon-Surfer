@@ -33,7 +33,7 @@ public class CannonShot : MonoBehaviour
 
         if (pressingMouse)
         {
-            Vector3 target = new Vector3(transform.position.x, transform.position.y + 6, transform.position.z + 20);
+            Vector3 target = new Vector3(transform.position.x, transform.position.y + 6, transform.position.z + 25);
             initialVelocity = target - firePoint;
         }
     }
@@ -43,5 +43,6 @@ public class CannonShot : MonoBehaviour
         GameObject cannonBall = Instantiate(cannonBallPrefab, firePoint, Quaternion.identity);
         Rigidbody rb = cannonBall.GetComponent<Rigidbody>();
         rb.AddForce(initialVelocity, ForceMode.Impulse);
+        Destroy(cannonBall, 3);
     }
 }

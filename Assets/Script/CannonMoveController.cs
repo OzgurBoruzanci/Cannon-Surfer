@@ -7,6 +7,7 @@ public class CannonMoveController : MonoBehaviour
     float horizontal;
     float placeWidth = 2.35f;
     public float speed;
+    float cannonPositionZControl = 95f;
     bool speedStop;
 
     void Start()
@@ -16,10 +17,16 @@ public class CannonMoveController : MonoBehaviour
     private void OnEnable()
     {
         EventManager.SpeedRegulation += SpeedRegulation;
+        EventManager.CannonPosition += CannonPosition;
     }
     private void OnDisable()
     {
         EventManager.SpeedRegulation -= SpeedRegulation;
+        EventManager.CannonPosition -= CannonPosition;
+    }
+    void CannonPosition()
+    {
+
     }
     void SpeedRegulation()
     {
@@ -42,6 +49,11 @@ public class CannonMoveController : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             MouseControl();
+        }
+        if (transform.position.z>= cannonPositionZControl)
+        {
+            EventManager.CannonPosition();
+            cannonPositionZControl += 100;
         }
     }
     private void LateUpdate()

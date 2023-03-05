@@ -6,4 +6,5 @@ public static class EventManager
 {
     public static Action SpeedRegulation;
     public static Action GameOverControl;
+    public static Action CannonPosition;
 }
