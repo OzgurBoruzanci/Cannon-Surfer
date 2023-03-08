@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraManager : MonoBehaviour
+public class CameraMoveManager : MonoBehaviour
 {
     public GameObject cannon;
     Vector3 cameraPosition;
@@ -16,7 +16,7 @@ public class CameraManager : MonoBehaviour
     void LateUpdate()
     {
         //Debug.Log(characterRg.boxsRb.Count);
-        cameraPosition = new Vector3(distanceBetween.x, distanceBetween.y , distanceBetween.z );
+        cameraPosition = new Vector3(distanceBetween.x, distanceBetween.y, distanceBetween.z);
         Camera.main.transform.position = cannon.transform.position - cameraPosition;
     }
 }
