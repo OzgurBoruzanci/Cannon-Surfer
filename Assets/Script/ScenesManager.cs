@@ -22,7 +22,7 @@ public class ScenesManager : MonoBehaviour
     {
         EventManager.CannonPosition-= CannonPosition;
     }
-    void CannonPosition()
+    void CannonPosition(Vector3 cannonPos)
     {
         CreateCastleWallAndObstacle();
     }

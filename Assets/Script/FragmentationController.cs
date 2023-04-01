@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CastleWallManager : MonoBehaviour
+public class FragmentationController : MonoBehaviour
 {
-    public Material orange;
+    //public Material orange;
     GameObject piece;
     Rigidbody rb;
     Collider[] colliders;
@@ -34,7 +34,7 @@ public class CastleWallManager : MonoBehaviour
         if (collision.gameObject.tag == "CannonBall")
         {
             toBeShotList.Add(collision.gameObject);
-            if (toBeShotList.Count== fragmentationControlInt)
+            if (toBeShotList.Count == fragmentationControlInt)
             {
                 FragmentationCube();
             }
@@ -75,7 +75,7 @@ public class CastleWallManager : MonoBehaviour
         piece.transform.localScale = new Vector3(cubeSize, cubeSize, cubeSize);
         piece.AddComponent<Rigidbody>();
         piece.GetComponent<Rigidbody>().mass = cubeSize;
-        piece.GetComponent<Renderer>().material.color = orange.color;
+        //piece.GetComponent<Renderer>().material.color = orange.color;
         Destroy(piece.GetComponent<BoxCollider>());
         Destroy(piece, 5);
     }

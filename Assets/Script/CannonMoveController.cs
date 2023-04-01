@@ -7,7 +7,7 @@ public class CannonMoveController : MonoBehaviour
     float horizontal;
     float placeWidth = 2.35f;
     public float speed;
-    float cannonPositionZControl = 95f;
+    float cannonPositionZControl = 180f;
     bool speedStop;
 
     void Start()
@@ -24,7 +24,7 @@ public class CannonMoveController : MonoBehaviour
         EventManager.SpeedRegulation -= SpeedRegulation;
         EventManager.CannonPosition -= CannonPosition;
     }
-    void CannonPosition()
+    void CannonPosition(Vector3 cannonPos)
     {
 
     }
@@ -52,8 +52,8 @@ public class CannonMoveController : MonoBehaviour
         }
         if (transform.position.z>= cannonPositionZControl)
         {
-            EventManager.CannonPosition();
-            cannonPositionZControl += 100;
+            EventManager.CannonPosition(transform.position);
+            cannonPositionZControl += 200;
         }
     }
     private void LateUpdate()
